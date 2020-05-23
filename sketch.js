@@ -6,7 +6,7 @@ let numCirs;
 let numRows;
 let Csize;
 let pSize; // phrase size
-
+let tSize;
 
 function preload(){
 
@@ -28,12 +28,14 @@ function setup() {
       numRows = 10;
       pSize = 5;
       Csize = width/3;
+      tSize = 88;
     }
      else {
       numCirs = 10; 
       numRows = 15;
       Csize = height/3;
       pSize =8;
+      tSize = 64;
     }
     //imageMode(CENTER);
    
