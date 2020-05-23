@@ -2,8 +2,11 @@
 let pg;
 let f;
 let sh;
+let numCirs;
+let numRows;
+let Csize;
+let pSize; // phrase size
 
-let rw,rh;
 
 function preload(){
 
@@ -19,7 +22,19 @@ function setup() {
     sh.setUniform("u_resolution", [width,height]);
     f = loadFont("steppes.ttf");
     rectMode(CENTER);
- 
+
+    if(width<600){
+      numCirs = 5; 
+      numRows = 15;
+      pSize = 5;
+      Csize = width/3;
+    }
+     else {
+      numCirs = 10; 
+      numRows = 15;
+      Csize = height/3;
+      pSize = 7;
+    }
     //imageMode(CENTER);
    
   }
@@ -33,15 +48,15 @@ function setup() {
     //pg.strokeWeight(5);
   
       pg.clear;
-      pg.strokeWeight(5);
+      //pg.strokeWeight(5);
       pg.ellipse(0,0,height,height);
 
   
 
 
-    for(var i = 0; i<10; i++){
+    for(var i = 1; i<numCirs+1; i++){
       
-    image(pg, noise(i*width*498290384*random(2))*mouseX, noise(i*height*42342132*random(2))*mouseY , noise(i*5)*height/2,noise(i*5)*height/2);
+    image(pg, noise(i*width*498290384*random(2))*mouseX*2, noise(i*height*42342132*random(2))*mouseY*2 , noise(i*5)*Csize,noise(i*5)*Csize);
   }
     textFont(f);
     //rect(0, 0, 200, 200);
@@ -52,10 +67,10 @@ function setup() {
     fill(255 * sin(frameCount*0.01)+1/2);
    // translate(width/2, height/2);
    // rotate(frameCount*0.01)
-    for (var i =0;i<20; i++){
+    for (var i =0;i<numRows; i++){
       textSize(noise(i*200)*60);
       
-      text(phr.repeat(8), -width * (sin(frameCount *0.003*i/2)+1)/2 , i/20 * height);
+      text(phr.repeat(pSize), -width * (sin(frameCount *0.003*i/2)+1)/2 , i/numRows * height);
       
     }
 
