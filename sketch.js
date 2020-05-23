@@ -24,8 +24,8 @@ function setup() {
     rectMode(CENTER);
 
     if(width<600){
-      numCirs = 5; 
-      numRows = 15;
+      numCirs = 2; 
+      numRows = 10;
       pSize = 5;
       Csize = width/3;
     }
