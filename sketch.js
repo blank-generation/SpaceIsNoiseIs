@@ -25,7 +25,7 @@ function setup() {
 
     if(width<600){
       numCirs = 2; 
-      numRows = 10;
+      numRows = 20;
       pSize = 5;
       Csize = width/3;
       tSize = 88;
