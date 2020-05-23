@@ -33,7 +33,7 @@ function setup() {
       numCirs = 10; 
       numRows = 15;
       Csize = height/3;
-      pSize = 7;
+      pSize =8;
     }
     //imageMode(CENTER);
    
@@ -48,6 +48,7 @@ function setup() {
     //pg.strokeWeight(5);
   
       pg.clear;
+      pg.noStroke();
       //pg.strokeWeight(5);
       pg.ellipse(0,0,height,height);
 
