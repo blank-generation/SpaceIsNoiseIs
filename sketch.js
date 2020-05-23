@@ -34,7 +34,7 @@ function setup() {
       numCirs = 10; 
       numRows = 15;
       Csize = height/3;
-      pSize =8;
+      pSize =10;
       tSize = 64;
     }
     //imageMode(CENTER);
