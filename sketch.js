@@ -27,7 +27,7 @@ function setup() {
       numCirs = 2; 
       numRows = 15;
       pSize = 4;
-      Csize = width;
+      Csize = height/4;
       tSize = 92;
     }
      else {
