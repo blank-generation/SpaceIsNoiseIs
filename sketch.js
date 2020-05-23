@@ -24,7 +24,7 @@ function setup() {
     rectMode(CENTER);
 
     if(width<600){
-      numCirs = 2; 
+      numCirs = 1; 
       numRows = 15;
       pSize = 4;
       Csize = height/4;
@@ -59,7 +59,7 @@ function setup() {
 
     for(var i = 1; i<numCirs+1; i++){
       
-    image(pg, noise(i*width*498290384*random(2))*mouseX*2, noise(i*height*42342132*random(2))*mouseY*2 , noise(i*5)*Csize,noise(i*5)*Csize);
+    image(pg, noise(i*width*random(2))*mouseX*2, noise(i*height*random(2))*mouseY*2 , noise(i*5)*Csize,noise(i*5)*Csize);
   }
     textFont(f);
     //rect(0, 0, 200, 200);
